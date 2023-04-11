@@ -2,18 +2,39 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper(".swiper-container", {
         direction: "horizontal",
         loop: true,
-        slidesPerView: 3,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: true,
-        },
+        slidesPerView: 4,
         spaceBetween: 20,
         grabCursor: true,
         freeMode: true,
         mousewheel: true,
+        freeModeMomentum: false,
+        freeModeMomentumBounce: false,
+        freeModeSticky: false,
+        freeModeMinimumVelocity: 200,
+        freeModeMomentumRatio: 200,
+        freeModeMomentumDeceleration: 0.5,
+        freeModeMomentumDuration: 300, // adjust this value
         speed: 300,
-    });
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 3,
+              spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            },
+            // when window width is >= 720px
+            780: {
+              slidesPerView: 4,
+              spaceBetween: 20
+            }
+    }
 });
+});
+
 
 
 

@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FioresGlobal</title>
-<!-- 
-    HELLO WORLD 
-    designed by Kutalmis Berke Yilmaz for Fiores Global -->
+<!--
+    HELLO WORLD
+    frontend by Kutalmis Berke Yilmaz and backend by Abdullah Zaman Babar for Fiores Global -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -22,7 +22,7 @@
 
     <link rel="stylesheet" href="https://cdn.tailwindcss.com">
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     {% block title %}{% endblock %}
 
 </head>
@@ -35,10 +35,10 @@
         <nav
             class="main-navbar w-screen h-20 md:h-[13vh] bg-slate-100 flex justify-between md:justify-end items-center md:fixed top-0 left-0 right-0 z-50">
 
-            <div class="navbar-fiores-logo md:h-14 flex md:absolute left-6 px-4 ">
+            <a class="navbar-fiores-logo md:h-14 flex md:absolute left-6 px-4" href="{% url 'fiores:index' %}">
                 <img class="md:w-14 w-8" src="{% static 'imgs/flowerlogo.png' %}" alt="">
                 <img class="md:w-40 w-24" src=" {% static 'imgs/fioreslogo.png' %}" alt="">
-            </div>
+            </a>
 
             <ul class="main-navbar-list md:flex gap-1 text-green-950 text-xl font-sans mr-4">
                 <li class="main-navbar-list-item"> <button id="toggle-button"
@@ -79,14 +79,14 @@
             <ul class="main-navbar-list flex flex-col gap-5 text-green-950 text-4xl font-sans mt-5">
 
                 <li class="main-navbar-list-item flex justify-center"> <a
-                        class="transition ease hover:text-slate-500 duration-200 p-2" href="index.html">Home</a> </li>
+                        class="transition ease hover:text-slate-500 duration-200 p-2" href="{% url 'fiores:index' %}">Home</a> </li>
                 <li class="main-navbar-list-item flex justify-center"> <a
-                        class="transition ease hover:text-slate-500 duration-200 p-2" href="about.html">About</a>
+                        class="transition ease hover:text-slate-500 duration-200 p-2" href="{% url 'fiores:about' %}">About</a>
                 </li>
                 <li class="main-navbar-list-item flex justify-center"> <a
-                        class="transition ease hover:text-slate-500 duration-200 p-2" href="team.html">Team</a></li>
+                        class="transition ease hover:text-slate-500 duration-200 p-2" href="{% url 'fiores:team' %}">Team</a></li>
                 <li class="main-navbar-list-item flex justify-center"> <a
-                        class="transition ease hover:text-slate-500 duration-200 p-2" href="projects.html">Projects</a>
+                        class="transition ease hover:text-slate-500 duration-200 p-2" href="{% url 'fiores:projects' %}">Projects</a>
                 </li>
             </ul>
         </nav>
